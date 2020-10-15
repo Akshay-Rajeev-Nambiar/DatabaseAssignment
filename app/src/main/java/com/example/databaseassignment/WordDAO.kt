@@ -8,8 +8,8 @@ import androidx.room.Query
 @Dao
 interface WordDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertWord(word : Word)
+    fun insertWord(word: Word)
 
     @Query("SELECT * FROM roomExample")
-    fun readAll() : List<Word>
+    fun readAll(): List<Word>
 }

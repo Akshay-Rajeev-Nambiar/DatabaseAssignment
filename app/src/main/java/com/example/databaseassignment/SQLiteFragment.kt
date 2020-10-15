@@ -19,7 +19,7 @@ class SQLiteFragment : Fragment(R.layout.fragment_sqlite) {
         recyclerView = view.findViewById(R.id.sql_recyclerview)
         insert_bttn = view.findViewById(R.id.sql_insert_bttn)
         display_bttn = view.findViewById(R.id.sql_display_bttn)
-        val sql_database = SQLiteDBhandler(view.context)
+        val sql_database = SQLiteDBHandler(view.context)
         recyclerView.layoutManager = LinearLayoutManager(view.context)
         insert_bttn.setOnClickListener {
             sql_database.insertData(word_et.text.toString())

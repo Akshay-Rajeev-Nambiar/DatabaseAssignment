@@ -6,19 +6,19 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
 
-class SQLiteDBhandler(var context: Context?) :
+class SQLiteDBHandler(var context: Context?) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
         const val DATABASE_NAME = "SQLExample.db"
         const val DATABASE_VERSION = 1
-        val TABLE_NAME = "Something"
-        val KEY_ID = "id"
-        val COL_WORD = "word"
-        val CREATE_TABLE_QUERY = "CREATE TABLE $TABLE_NAME (" +
+        const val TABLE_NAME = "Something"
+        private const val KEY_ID = "id"
+        const val COL_WORD = "word"
+        const val CREATE_TABLE_QUERY = "CREATE TABLE $TABLE_NAME (" +
                 "$KEY_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 "$COL_WORD TEXT)"
-        val DROP_QUERY = "DROP TABLE IF EXISTS $TABLE_NAME"
+        const val DROP_QUERY = "DROP TABLE IF EXISTS $TABLE_NAME"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
