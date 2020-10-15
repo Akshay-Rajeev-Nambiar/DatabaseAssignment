@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Database Assignment</string>
+    <string name="sqlite_bttn_text">SQLite</string>
+    <string name="room_bttn_text">ROOM</string>
+    <string name="word_et">Enter word here</string>
+    <string name="insert_bttn">INSERT</string>
+    <string name="display_bttn">DISPLAY</string>
+</resources>
