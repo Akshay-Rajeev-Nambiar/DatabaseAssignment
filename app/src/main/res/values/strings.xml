@@ -5,4 +5,6 @@
     <string name="word_et">Enter word here</string>
     <string name="insert_bttn">INSERT</string>
     <string name="display_bttn">DISPLAY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

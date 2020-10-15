@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var sqlite_bttn : Button
     private lateinit var room_bttn : Button
+    private val sqlFragment = SQLiteFragment()
+    private val roomFragment = RoomFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,17 +19,29 @@ class MainActivity : AppCompatActivity() {
 
         sqlite_bttn = findViewById(R.id.sqlite_bttn)
         room_bttn = findViewById(R.id.room_bttn)
+
     }
 
     fun onClick(view : View){
         when(view.id){
             R.id.sqlite_bttn ->{
-                val intentSqlite : Intent = Intent(this, SQLiteActivity::class.java)
-                startActivity(intentSqlite)
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.database_frame, sqlFragment)
+                    commit()
+                }
+
+//                val intentSqlite : Intent = Intent(this, SQLiteActivity::class.java)
+//                startActivity(intentSqlite)
+
             }
             R.id.room_bttn ->{
-                val intentRoom : Intent = Intent(this, RoomActivity::class.java)
-                startActivity(intentRoom)
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.database_frame, roomFragment)
+                    commit()
+                }
+
+//                val intentRoom : Intent = Intent(this, RoomActivity::class.java)
+//                startActivity(intentRoom)
             }
         }
     }
