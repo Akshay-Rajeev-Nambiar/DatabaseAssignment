@@ -1,6 +1,5 @@
 package com.example.databaseassignment
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -29,19 +28,12 @@ class MainActivity : AppCompatActivity() {
                     replace(R.id.database_frame, sqlFragment)
                     commit()
                 }
-
-//                val intentSqlite : Intent = Intent(this, SQLiteActivity::class.java)
-//                startActivity(intentSqlite)
-
             }
             R.id.room_bttn ->{
                 supportFragmentManager.beginTransaction().apply {
                     replace(R.id.database_frame, roomFragment)
                     commit()
                 }
-
-//                val intentRoom : Intent = Intent(this, RoomActivity::class.java)
-//                startActivity(intentRoom)
             }
         }
     }
